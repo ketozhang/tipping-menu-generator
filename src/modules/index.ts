@@ -20,12 +20,12 @@ function changeToEdit(e: Event) {
 
 function updateButtonTextFromFormInput1(button_text: HTMLSpanElement) {
     let input = getInputFromButtonText(button_text);
-    button_text.innerHTML = input.value;
+    button_text.innerHTML = input.value ? input.value : "&nbsp;";
 }
 
 function updateButtonTextFromFormInput2(input: HTMLInputElement) {
     let button_text = getButtonTextFromInput(input);
-    button_text.innerHTML = input.value;
+    button_text.innerHTML = input.value ? input.value : "&nbsp;";
 }
 
 function getInputFromButtonText(text_element: HTMLElement): HTMLInputElement {
